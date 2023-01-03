@@ -1,8 +1,8 @@
 import style from './MyButton.module.css'
 
-const MyButton = () => { 
+const MyButton = ({text}, {effect}) => { 
   return (
-    <div className={style.my_button}>Click Me</div>
+    <div className={style.my_button} onClick={effect}>{text}</div>
   )
 };
 
