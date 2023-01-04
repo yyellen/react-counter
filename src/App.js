@@ -14,12 +14,21 @@ function App() {
 
   useEffect(() => {
     // 當number值改變時，會觸發前面的事
-    // 判斷 number 現在是奇數還是偶數
-    if (number % 2 === 0) {
-      console.log(`${number} is even`);
-    } else {
-      console.log(`${number} is odd`);
+    if (number < 2) {
+      console.log(`${number}不是質數`);
+      document.title = `${number}不是質數`;
+      return;
     }
+    for (let i = 2; i < number; i++) {
+      if (number % i === 0) {
+        console.log(`${number}不是質數`);
+        document.title = `${number}不是質數`;
+        return;
+      }
+    }
+    console.log(`${number}是質數`);
+    document.title = `${number}是質數`;
+    return;
   }, [number]);
 
   return (
@@ -29,7 +38,6 @@ function App() {
         <p className="number">{number}</p>
         <button onClick={add}>+</button>
       </div>
-      <div>{number}</div>
     </div>
   );
 }
