@@ -1,0 +1,35 @@
+.counter {
+  @apply bg-[#1c1c1c] text-[#f0f0f0] w-[500px] h-[500px] rounded-3xl flex flex-col items-center
+}
+
+.count_container {
+  @apply bg-[#505050] w-[400px] h-[150px] rounded-3xl flex justify-center items-center p-5 mt-[50px]
+}
+
+.count {
+  @apply text-9xl mt-0 mb-2
+}
+
+.buttons_container {
+  @apply w-[400px] flex justify-evenly items-center mt-[50px]
+}
+
+.button {
+  @apply w-24 h-24 text-6xl border-2 rounded-full first:mr-4 bg-[#FF9500] hover:text-[#f0f0f0] duration-300 pb-3
+}
+
+.sub_button {
+  @apply hover:bg-[#eb7979]
+}
+
+.add_button {
+  @apply hover:bg-[#79b8eb]
+}
+
+.is_prime {
+  @apply mt-4 text-2xl text-[e3284d]
+}
+
+.not_prime {
+  @apply mt-4 text-2xl text-[#00b67e]
+}
